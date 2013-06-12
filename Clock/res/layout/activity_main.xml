@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileSwitcher"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" 
+	>
+    <Button
+        android:id="@+id/stopAlarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/removeAlarmButton"
+        android:layout_alignRight="@+id/removeAlarmButton"
+        android:layout_below="@+id/removeAlarmButton"
+        android:text="@string/stopAlarmButton" />
+
+    <Button
+        android:id="@+id/removeAlarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/addAlarmButton"
+        android:layout_alignRight="@+id/addAlarmButton"
+        android:layout_below="@+id/addAlarmButton"
+        android:text="@string/removeAlarmButton" />
+
+    <Button
+        android:id="@+id/addAlarmButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/addAlarmButton" />
+
+    <Button
+        android:id="@+id/printAlarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/stopAlarmButton"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/stopAlarmButton"
+        android:text="@string/printAlarmButton" />
+
+    <TextView
+        android:id="@+id/alarmStateStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/printAlarmButton"
+        android:layout_alignRight="@+id/printAlarmButton"
+        android:layout_centerVertical="true"
+        android:text="@string/alarmStateStatus"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/nameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter alarm name here:" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/uriEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter alarm URI here:" />
+
+    <EditText
+        android:id="@+id/gameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter game name here:" />
+
+    <EditText
+        android:id="@+id/cycleEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter cycle (in minutes) here:" />
+
+    <EditText
+        android:id="@+id/volumeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter volume (from 0 to 100) here:" />
+
+    <Button
+        android:id="@+id/confirmAddButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmAddButton" />
+
+    <TextView
+        android:id="@+id/addAlarmStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter valid settings"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/addAlarmDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Default Settings" />
+
+    <Button
+        android:id="@+id/addAlarmAbort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abort" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/removeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Type alarm name and click remove button to remove it." >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/confirmRemoveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmRemoveButton" />
+
+    <TextView
+        android:id="@+id/removeAlarmStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter valid alarm name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/removeAlarmAbort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abort" />
+
+</LinearLayout>
+
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+
+</ListView>
+</ViewFlipper>

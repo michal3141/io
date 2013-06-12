@@ -1,0 +1,88 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (classFileParser.cpp:3470), pid=6884, tid=6612
+#  Error: ShouldNotReachHere()
+#
+# JRE version: 7.0-b147
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0-b17 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000035b800):  JavaThread "Unknown thread" [_thread_in_vm, id=6612, stack(0x0000000002210000,0x0000000002310000)]
+
+Stack: [0x0000000002210000,0x0000000002310000]
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000000000035b800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=6612, stack(0x0000000002210000,0x0000000002310000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Dynamic libraries:
+0x000000013fcf0000 - 0x000000013fd23000 	D:\Java\jdk1.7.0\bin\javaw.exe
+0x0000000076d10000 - 0x0000000076eb9000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000076af0000 - 0x0000000076c0f000 	C:\Windows\system32\kernel32.dll
+0x000007fefc330000 - 0x000007fefc39b000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefc580000 - 0x000007fefc65b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefcb70000 - 0x000007fefcc0f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefe090000 - 0x000007fefe0af000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefc810000 - 0x000007fefc93d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000076c10000 - 0x0000000076d0a000 	C:\Windows\system32\USER32.dll
+0x000007fefe0b0000 - 0x000007fefe117000 	C:\Windows\system32\GDI32.dll
+0x000007fefc9f0000 - 0x000007fefc9fe000 	C:\Windows\system32\LPK.dll
+0x000007fefc740000 - 0x000007fefc809000 	C:\Windows\system32\USP10.dll
+0x000007fefabb0000 - 0x000007fefada4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefc970000 - 0x000007fefc9e1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefdf30000 - 0x000007fefdf5e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefca60000 - 0x000007fefcb69000 	C:\Windows\system32\MSCTF.dll
+0x000007fefbfb0000 - 0x000007fefbfd0000 	C:\Windows\system32\nvinitx.dll
+0x00000000640b0000 - 0x0000000064181000 	D:\Java\jdk1.7.0\jre\bin\msvcr100.dll
+0x0000000060140000 - 0x000000006080e000 	D:\Java\jdk1.7.0\jre\bin\server\jvm.dll
+0x000007fef3250000 - 0x000007fef3259000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefe2a0000 - 0x000007fefe2ed000 	C:\Windows\system32\WS2_32.dll
+0x000007fefc960000 - 0x000007fefc968000 	C:\Windows\system32\NSI.dll
+0x000007fef8eb0000 - 0x000007fef8eeb000 	C:\Windows\system32\WINMM.dll
+0x0000000076ed0000 - 0x0000000076ed7000 	C:\Windows\system32\PSAPI.DLL
+0x00000000642d0000 - 0x00000000642df000 	D:\Java\jdk1.7.0\jre\bin\verify.dll
+0x00000000642a0000 - 0x00000000642c8000 	D:\Java\jdk1.7.0\jre\bin\java.dll
+0x0000000064280000 - 0x0000000064295000 	D:\Java\jdk1.7.0\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1250 -Xbootclasspath:D:\Android SDK\adt-bundle-windows-x86_64-20130219\sdk\platforms\android-17\android.jar 
+java_command: org.calendar.CalendarTest
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\Java\jdk1.7.0
+PATH=D:/Java/jdk1.7.0/bin/../jre/bin/server;D:/Java/jdk1.7.0/bin/../jre/bin;D:/Java/jdk1.7.0/bin/../jre/lib/amd64;C:\Program Files (x86)\Haskell\bin;C:\Program Files (x86)\Haskell Platform\2012.4.0.0\lib\extralibs\bin;C:\Program Files (x86)\Haskell Platform\2012.4.0.0\bin;C:\WinAVR-20100110\bin;C:\WinAVR-20100110\utils\bin;C:\Program Files (x86)\OCaml\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Haskell Platform\2012.4.0.0\mingw\bin;C:\Users\Micha³\AppData\Roaming\cabal\bin;D:\Java\jdk1.7.0\bin;C:\Users\Micha³\Desktop\JAVA\apache-ant-1.9.0\bin;C:\Users\Micha³\Desktop\C64\dasm-2.20.11\bin;C:\Users\Micha³\Desktop\C64\WinVICE-2.2-x64;C:\cygwin\bin;C:\Python27;C:\Python33;D:\Erlang\erl5.9.2\bin;C:\Program Files (x86)\OCaml\bin;D:\Maven\apache-maven-3.0.4\bin;C:\Users\Micha³\Desktop\6sem\grafa;C:\Windows\System32;D:\Android SDK\adt-bundle-windows-x86_64-20130219\eclipse;
+USERNAME=Micha³
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 3985912k(939924k free), swap 7969964k(2546848k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0-b17) for windows-amd64 JRE (1.7.0-b147), built on Jun 27 2011 02:19:45 by "java_re" with unknown MS VC++:1600
+
+time: Tue Apr 30 12:20:29 2013
+elapsed time: 0 seconds
+

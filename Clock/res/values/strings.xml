@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Clock</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="addAlarmButton">Add Alarm</string>
+    <string name="stopAlarmButton">Stop Alarm</string>
+    <string name="removeAlarmButton">Remove Alarm</string>
+    <string name="exitButton">Exit</string>
+    <string name="confirmAddButton">Add Alarm</string>
+    <string name="printAlarmButton">Show Alarms</string>
+    <string name="confirmRemoveButton">Remove Alarm</string>
+    <string name="alarmStateStatus">No alarm is running.</string>
+
+</resources>

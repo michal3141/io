@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<FrameLayout
+    android:id="@+id/main_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+     >
+
+    <ImageView
+        android:id="@+id/zegar1"
+        android:layout_width="match_parent"
+        android:layout_height="365dp"
+        android:src="@drawable/zegar" />
+
+</FrameLayout>
+
+<EditText
+    android:id="@+id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:ems="10" />
+
+<Button
+    android:id="@+id/minutowa1"
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignTop="@+id/text1"
+    android:text="Minutowa" />
+
+</RelativeLayout>

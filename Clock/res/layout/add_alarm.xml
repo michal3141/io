@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/nameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter alarm name here:" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/uriEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter alarm URI here:" />
+
+    <EditText
+        android:id="@+id/gameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter game name here:" />
+
+    <EditText
+        android:id="@+id/cycleEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter cycle (in minutes) here:" />
+
+    <EditText
+        android:id="@+id/volumeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter volume (from 0 to 100) here:" />
+
+    <Button
+        android:id="@+id/confirmAddButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmAddButton" />
+
+    <TextView
+        android:id="@+id/addAlarmStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter valid settings"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/addAlarmDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Default Settings" />
+
+    <Button
+        android:id="@+id/addAlarmAbort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abort" />
+
+</LinearLayout>

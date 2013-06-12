@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alarms>
+    <alarm>
+        <name>alarm1</name>
+        <uri>/data/data/org.clock/files/adams.mp3</uri>
+        <game>WOW</game>
+        <cycle>140</cycle>
+        <volume>80</volume>
+        <date>
+            <year>2013</year>
+            <month>4</month>
+            <day>4</day>
+            <hour>15</hour>
+            <minute>30</minute>
+        </date>
+    </alarm>
+    <alarm>
+        <name>alarm2</name>
+        <uri>/data/data/org.clock/files/circus.mp3</uri>
+        <game>TitanQuest</game>
+        <cycle>120</cycle>
+        <volume>70</volume>
+        <date>
+            <year>2013</year>
+            <month>4</month>
+            <day>4</day>
+            <hour>16</hour>
+            <minute>30</minute>
+        </date>       
+    </alarm>
+</alarms>
