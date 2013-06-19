@@ -1,3 +1,31 @@
+/*
+Copyright (c) 2013, Damian Kudas & Micha³ Mrowczyk
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met: 
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer. 
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution. 
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The views and conclusions contained in the software and documentation are those
+of the authors and should not be interpreted as representing official policies, 
+either expressed or implied, of the FreeBSD Project.
+*/
 package org.clock;
 
 /**
@@ -19,6 +47,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.IBinder;
+import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -57,6 +86,7 @@ public class Listener extends Activity {
 		this.player = new MediaPlayer();
 	}
 	
+	
 	/**
 	 * To clean up some resources
 	 */
@@ -78,7 +108,14 @@ public class Listener extends Activity {
 				for (final Alarm alarm : alarms) {
 					if (compareToMinutes(alarm.getDate(), new GregorianCalendar()) >= 0) {
 						// Playing 'non-expired' alarms (with time not older than current minute)
-						System.out.println(alarm.getUri());
+						System.out.println(alarm.getUri());	
+						
+						runOnUiThread(new Runnable() {
+							public void run() {
+								displayToast(context, alarm);
+							}
+						});				
+					
 						playSound(context, Uri.parse(alarm.getUri()),
 								alarm.getVolume() / 100.0, true);
 						runOnUiThread(new Runnable() {
@@ -109,6 +146,20 @@ public class Listener extends Activity {
 				}					
 			});
 		}
+	}
+
+
+	/**
+	 * Displays Toast representing alarm
+	 * @param context - applicationContext
+	 * @param alarm - alarm object
+	 */
+	private void displayToast(Context context, final Alarm alarm) {
+		String name = alarm.getName();
+		String game = alarm.getGame();
+		Toast.makeText(context, 
+				"Playing alarm: " + name + " game: " + game,
+				Toast.LENGTH_LONG).show();
 	}
 	
 	/**
