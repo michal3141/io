@@ -33,8 +33,10 @@ import org.clock.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.util.FloatMath;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -56,6 +58,8 @@ public class MainActivity extends Activity{
 	 */
 	Ball b=null;
 
+	int width,height;
+	
 	/**
 	 * Second ball
 	 */
@@ -112,6 +116,7 @@ public class MainActivity extends Activity{
 	/**
 	 * What happens when this activity is created
 	 */
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -119,8 +124,14 @@ public class MainActivity extends Activity{
 		FrameLayout main = (FrameLayout) findViewById(R.id.main_view);
 		final TextView text= (TextView)findViewById(R.id.text1);
 
+		Display display = getWindowManager().getDefaultDisplay();
+		width = display.getWidth();
+		int width2= (int)width/2;
+		height = display.getHeight();
+		int height2= (int)(height/2.7);
+		
 		// !!
-		b=new Ball(this,160,177,160,50,Color.GRAY);
+		b=new Ball(this,width/2,height2,width/2,50,Color.GRAY);
 		main.addView(b);
 
 
@@ -147,8 +158,8 @@ public class MainActivity extends Activity{
 				final float y = e.getY();
 
 				// srodek okregu rozny dla urzadzen.. zakomentowane dla telefonu..
-				final float xs= 160;
-				final float ys= 177;
+				final float xs= width/2;
+				final float ys= (float) (height/2.7);
 
 
 				if((minutka== true) && (press==true)){
@@ -160,8 +171,8 @@ public class MainActivity extends Activity{
 				}
 
 
-				float yp= 29;
-				float r= 148;
+				float yp= (float)(height/16.5);
+				float r= ys-yp;
 
 				float b= FloatMath.sqrt((x-xs)*(x-xs)+(ys-y)*(ys-y));
 				float c= FloatMath.sqrt((x-xs)*(x-xs)+(y-yp)*(y-yp));
@@ -273,4 +284,3 @@ public class MainActivity extends Activity{
 
 
 }
-

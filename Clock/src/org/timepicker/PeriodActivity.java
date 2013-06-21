@@ -34,6 +34,7 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.FloatMath;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -50,6 +51,8 @@ public class PeriodActivity extends Activity{
 	 * Ball
 	 */
 	Ball b=null;
+	
+	int width,height;
 	
 	/**
 	 * Hand of the clock
@@ -101,8 +104,14 @@ public class PeriodActivity extends Activity{
         FrameLayout main = (FrameLayout) findViewById(R.id.period_view);
 		final TextView text= (TextView)findViewById(R.id.text2);
 		
+		Display display = getWindowManager().getDefaultDisplay();
+		width = display.getWidth();
+		int width2= (int)width/2;
+		height = display.getHeight();
+		int height2= (int)(height/2.7);
+		
 		// !!
-		b=new Ball(this,160,177,170,50,Color.BLUE);
+		b=new Ball(this,width/2,height2,170,50,Color.BLUE);
 		main.addView(b);
 		
 		
@@ -113,11 +122,11 @@ public class PeriodActivity extends Activity{
 		    	final float y = e.getY();
 		    	
 		    	// srodek okregu rozny dla urzadzen..
-		    	final float xs= 160;
-		    	final float ys= 177;			
+		    	final float xs= width/2;
+				final float ys= (float) (height/2.7);		
 
-		    	float yp= 29;
-		    	float r= 148;
+				float yp= (float)(height/16.5);
+				float r= ys-yp;
 		    	if((x-xs)*(x-xs)+(y-ys)*(y-ys)<r*r*0.6){
 		    		text.setText("godzina");
 		    		minutka=false;
@@ -177,4 +186,3 @@ public class PeriodActivity extends Activity{
     }
 	
 }
-

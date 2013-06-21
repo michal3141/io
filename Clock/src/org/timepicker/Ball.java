@@ -43,6 +43,7 @@ import android.view.View;
 @SuppressLint("ViewConstructor")
 public class Ball extends View{
 	
+	
 	/**
 	 * Center x coordinate
 	 */
@@ -99,7 +100,7 @@ public class Ball extends View{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         //!!
-        canvas.drawCircle(160, 177, 15, mPaint);
+        canvas.drawCircle(x, y, 15, mPaint);
         canvas.drawLine(x, y, x1, y1, mPaint);
     }
     
